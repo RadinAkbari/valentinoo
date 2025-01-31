@@ -9,12 +9,20 @@ document.addEventListener("DOMContentLoaded", function() {
         createHearts();
     });
 
-    noBtn.addEventListener("mouseover", function() {
-        const x = Math.random() * window.innerWidth - 50;
-        const y = Math.random() * window.innerHeight - 50;
+    // Move the "No" button to a random position on hover
+    noBtn.addEventListener("mouseover", function () {
+        const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+        const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+        noBtn.style.position = "absolute";
         noBtn.style.left = `${x}px`;
         noBtn.style.top = `${y}px`;
     });
+
+    // Show a pop-up message when "No" is clicked
+    noBtn.addEventListener("click", function () {
+        alert("Are you sure? I buy you ice cream🍦🙇🏻‍♂️🥺!");
+    });
+});
 
     function createHearts() {
         for (let i = 0; i < 20; i++) {
