@@ -1,0 +1,74 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    background: #ffe6f2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 24px;
+    color: #ff4d79;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#yesBtn {
+    background: #ff4d79;
+    color: white;
+}
+
+#noBtn {
+    background: #999;
+    color: white;
+    position: absolute;
+}
+
+#message {
+    font-size: 22px;
+    color: #ff4d79;
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes floatingHearts {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-600px); opacity: 0; }
+}
+
+.heart {
+    position: absolute;
+    color: #ff4d79;
+    font-size: 20px;
+    animation: floatingHearts 4s infinite linear;
+}
+
+.valentine-img {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 15px; /* Makes the image slightly rounded */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
+}
